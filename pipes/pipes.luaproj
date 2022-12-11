@@ -1,0 +1,67 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>E439935D-B2A2-46AE-856D-2AA408428F33</ProjectGuid>
+    <!--74de4cd2-070f-41d9-88e1-73fab9cb300d-->
+    <ProjectHome>
+    </ProjectHome>
+    <StartupFile>
+    </StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>pipes</Name>
+    <RootNamespace>pipes</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="common\niled.lua">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="common\table.lua">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="pipes\markov.lua">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="main.lua">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="common\iterator.lua">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="common\cond.lua">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="pipes\markov\sequence_generator.lua">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="pipes\markov\table_generator.lua">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="pipes\successive.lua">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="pipes\words.lua">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="pipes\zip.lua">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="common\" />
+    <Folder Include="pipes\" />
+    <Folder Include="pipes\markov\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+</Project>
